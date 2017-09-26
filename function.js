@@ -52,8 +52,8 @@ var allFrequencies = [
 		
 		var note = document.getElementById("note").value;
 		console.log(note);
-		if (note >= 0 && note <= 127 ) 
-			document.getElementById("frequenz").innerHTML = allFrequencies[note];
+		if (note >= 0 && note <= 143 ) 
+			document.getElementById("frequenz").innerHTML = "The frequency you entered is: " + "<h1>" + allFrequencies[note] + " Hz. </h1>";
 		else
-			document.getElementById("frequenz").innerHTML = "Bitte geben Sie nur Zahlen von 0 bis 127 ein";
+			document.getElementById("frequenz").innerHTML = "<h1> Error! </h1> Please only enter numbers the range of 0 to 143!";
 	}

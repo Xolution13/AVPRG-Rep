@@ -7,21 +7,34 @@
 		<header>
 			<title>Aufgabe 2</title>
 			<script src="function.js"></script>
-			<br>Hier kannst du eine MIDI-Note eingeben:</br>
+			<br><h1 style="text-decoration: underline;">Please enter a MIDI-value to calculate its frequency:</h1></br>
+			<br></br>
 		
 		</header>
 
 		<body>
 
 			<input id="note">
-			<button type="button" onclick="midiFunction()">Welche Frequenz?</button>
+			<button type="button" onclick="midiFunction()">Calculate frequency!</button>
 			<br></br>
-			<a>Die Frequenz ist:</a><h1 id="frequenz"></h1>
+			<a id="frequenz"></a>
 
 		</body>
 
 
-
+		<footer>
+		
+		<script>
+		var	context = new AudioContext();
+		
+		var oscillator = context.createOscillator();
+		oscillator.connect(context.destination);
+		oscillator.start(context.currentTime);
+		oscillator.stop(context.currentTime+1);
+		
+		</script>
+		
+		</footer>
 
 
 </html>
